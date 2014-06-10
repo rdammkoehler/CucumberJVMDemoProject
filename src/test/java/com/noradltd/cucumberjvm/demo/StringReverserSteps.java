@@ -7,9 +7,11 @@ import cucumber.runtime.PendingException;
 
 public class StringReverserSteps {
 
+	private StringReverser reverser;
+	
 	@Given("^a String Reverser$")
 	public void a_String_Reverser() throws Throwable {
-	    throw new PendingException();
+		reverser = new StringReverser();
 	}
 
 	@When("^I reverse the string \"([^\"]*)\"$")
