@@ -11,7 +11,7 @@ public class ReverseBasics {
 	private static final String SINGLE_WORD = "werd";
 	private static final String SINGLE_CHARACTER = "a";
 	private static final String EMPTY_STRING = "";
-	
+
 	private String reverse(String input) {
 		return new StringReverser().reverse(input);
 	}
@@ -25,12 +25,12 @@ public class ReverseBasics {
 	public void singleCharacterIsReversedToItself() {
 		assertThat(reverse(SINGLE_CHARACTER), is(SINGLE_CHARACTER));
 	}
-	
+
 	@Test
 	public void singleWordIsReversedToItself() {
 		assertThat(reverse(SINGLE_WORD), is(SINGLE_WORD));
 	}
-	
+
 	@Test
 	public void nullIsReversedToNull() {
 		assertThat(reverse(null), is(nullValue()));
