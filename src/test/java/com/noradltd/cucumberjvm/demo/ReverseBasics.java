@@ -7,6 +7,8 @@ import org.junit.Test;
 
 public class ReverseBasics {
 
+	private static final String SINGLE_WORD = "werd";
+	private static final String SINGLE_CHARACTER = "a";
 	private static final String EMPTY_STRING = "";
 	
 	private String reverse(String input) {
@@ -20,11 +22,11 @@ public class ReverseBasics {
 
 	@Test
 	public void singleCharacterIsReversedToItself() {
-		assertThat(reverse("a"), is("a"));
+		assertThat(reverse(SINGLE_CHARACTER), is(SINGLE_CHARACTER));
 	}
 	
 	@Test
 	public void singleWordIsReversedToItself() {
-		assertThat(reverse("werd"), is("werd"));
+		assertThat(reverse(SINGLE_WORD), is(SINGLE_WORD));
 	}
 }
