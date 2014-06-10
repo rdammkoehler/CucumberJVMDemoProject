@@ -12,13 +12,16 @@ public class StringReverser {
 	
 	public String reverse(String input) {
 		String output = input;
-		if (input != null && input.indexOf(SPACE) > -1 ) {
-			String[] words = input.split(" ");
-			List<String> wordsList = Arrays.asList(words);
+		if (containsSpace(input) ) {
+			List<String> wordsList = Arrays.asList(input.split(" "));
 			Collections.reverse(wordsList);
 			output = Joiner.on(" ").join(wordsList);
 		}
 		return output;
+	}
+
+	private boolean containsSpace(String input) {
+		return input != null && input.indexOf(SPACE) > -1;
 	}
 	
 }
