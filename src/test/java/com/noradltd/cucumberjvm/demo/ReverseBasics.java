@@ -1,6 +1,7 @@
 package com.noradltd.cucumberjvm.demo;
 
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
@@ -28,5 +29,10 @@ public class ReverseBasics {
 	@Test
 	public void singleWordIsReversedToItself() {
 		assertThat(reverse(SINGLE_WORD), is(SINGLE_WORD));
+	}
+	
+	@Test
+	public void nullIsReversedToNull() {
+		assertThat(reverse(null), is(nullValue()));
 	}
 }
