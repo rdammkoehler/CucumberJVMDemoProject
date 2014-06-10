@@ -20,11 +20,11 @@ public class ReverseBasics {
 
 	@Test
 	public void singleCharacterIsReversedToItself() {
-		assertThat(new StringReverser().reverse("a"), is("a"));
+		assertThat(reverse("a"), is("a"));
 	}
 	
 	@Test
 	public void singleWordIsReversedToItself() {
-		assertThat(new StringReverser().reverse("werd"), is("werd"));
+		assertThat(reverse("werd"), is("werd"));
 	}
 }
