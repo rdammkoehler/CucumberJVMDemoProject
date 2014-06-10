@@ -34,7 +34,6 @@ public class StringReverser {
 	}
 
 	private String reInsertWhitespaces(List<String> whitespaces, List<String> words) {
-		String output;
 		StringBuilder sb = new StringBuilder();
 		Iterator<String> whitespacesItr = whitespaces.iterator();
 		String whitespace = whitespacesItr.next();
@@ -46,8 +45,7 @@ public class StringReverser {
 				}
 			}
 		}
-		output = trimTrailingSeperator(sb, whitespace);
-		return output;
+		return trimTrailingSeperator(sb, whitespace);
 	}
 
 	private String trimTrailingSeperator(StringBuilder sb, String whitespace) {
