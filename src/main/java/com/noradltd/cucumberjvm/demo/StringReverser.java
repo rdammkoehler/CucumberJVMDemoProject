@@ -8,6 +8,7 @@ import com.google.common.base.Joiner;
 
 public class StringReverser {
 
+	private static final String SLASH_SLASH = "\\";
 	private static final String SPACE = " ";
 	private static final String BACKSPACE = "\\b";
 	private static final String FORM_FEED = "\\f";
@@ -22,13 +23,15 @@ public class StringReverser {
 		String output = input;
 		String whitespace = SPACE;
 		if (null != input && null != (whitespace = containsWhiteSpace(input))) {
-			String before = whitespace;
-			whitespace = (whitespace.startsWith("\\")) ? "\\" + whitespace : whitespace;
-			List<String> words = Arrays.asList(input.split(whitespace));
+			List<String> words = Arrays.asList(input.split(escapeRegEx(whitespace)));
 			Collections.reverse(words);
-			output = Joiner.on(before).join(words);
+			output = Joiner.on(whitespace).join(words);
 		}
 		return output;
+	}
+
+	private String escapeRegEx(String whitespace) {
+		return (whitespace.startsWith(SLASH_SLASH)) ? SLASH_SLASH + whitespace : whitespace;
 	}
 
 	private String containsWhiteSpace(String input) {
