@@ -17,8 +17,8 @@ public class MultipleWordReversal {
 	}
 	
 	@Test
-	public void handlesMultipleWhitespaces() {
-		assertThat(reverse("Hello  World"), is("World  Hello"));
+	public void doesNotHandleMultipleWhitespaces() {
+		assertThat(reverse("Hello  World"), is("World Hello"));
 	}
 	
 	@Test
