@@ -18,4 +18,9 @@ public class ReverseBasics {
 	public void singleCharacterIsReversedToItself() {
 		assertThat(new StringReverser().reverse("a"), is("a"));
 	}
+	
+	@Test
+	public void singleWordIsReversedToItself() {
+		assertThat(new StringReverser().reverse("werd"), is("werd"));
+	}
 }
