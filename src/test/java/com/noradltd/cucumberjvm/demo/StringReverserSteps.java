@@ -8,6 +8,7 @@ import cucumber.runtime.PendingException;
 public class StringReverserSteps {
 
 	private StringReverser reverser;
+	private String actual;
 	
 	@Given("^a String Reverser$")
 	public void a_String_Reverser() throws Throwable {
@@ -15,12 +16,12 @@ public class StringReverserSteps {
 	}
 
 	@When("^I reverse the string \"([^\"]*)\"$")
-	public void I_reverse_the_string(String arg1) throws Throwable {
-	    throw new PendingException();
+	public void I_reverse_the_string(String input) throws Throwable {
+	    actual = reverser.reverse(input);
 	}
 
 	@Then("^the result is \"([^\"]*)\"$")
-	public void the_result_is(String arg1) throws Throwable {
+	public void the_result_is(String expected) throws Throwable {
 	    throw new PendingException();
 	}
 	
