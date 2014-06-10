@@ -20,4 +20,9 @@ public class MultipleWordReversal {
 	public void handlesMultipleWhitespaces() {
 		assertThat(reverse("Hello  World"), is("World  Hello"));
 	}
+	
+	@Test
+	public void handlesSeveralWords() {
+		assertThat(reverse("Bacon is the life blood of Agile Software Development"), is("Development Software Agile of blood life the is Bacon"));
+	}
 }
