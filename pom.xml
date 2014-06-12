@@ -30,9 +30,6 @@
 					<useFile>false</useFile>
 					<parallel>classes</parallel>
 					<threadCount>10</threadCount>
-					<includes>
-						<include>**/*.java</include>
-					</includes>
 				</configuration>
 			</plugin>
 		</plugins>
