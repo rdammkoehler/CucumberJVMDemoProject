@@ -5,7 +5,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class MultipleWordReversal {
+public class MultipleWordReversalTest {
 
 	private String reverse(String input) {
 		return new StringReverser().reverse(input);

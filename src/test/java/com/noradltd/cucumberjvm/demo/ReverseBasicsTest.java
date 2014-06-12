@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class ReverseBasics {
+public class ReverseBasicsTest {
 
 	private static final String SINGLE_WORD = "werd";
 	private static final String SINGLE_CHARACTER = "a";

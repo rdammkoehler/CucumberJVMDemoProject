@@ -5,7 +5,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class ReverseAllWhiteSpaces {
+public class ReverseAllWhiteSpacesTest {
 
 	private String reverse(String input) {
 		return new StringReverser().reverse(input);
